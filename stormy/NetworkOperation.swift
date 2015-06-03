@@ -9,27 +9,32 @@
 import Foundation
 
 class NetworkOperation {
+    
     lazy var config: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
     lazy var session: NSURLSession = NSURLSession(configuration: self.config)
-    let queryURl: NSURL
+    let queryURL: NSURL
     
-    typealias JSONDictionarayCompletion = ([String: AnyObject]?) -> ()
+    typealias JSONDictionaryCompletion = ([String: AnyObject]? -> Void)
     
-    init(url: NSURL){
-        self.queryURl = url
+    init(url: NSURL) {
+        self.queryURL = url
     }
     
-    func downloadJSONFromUrL(completion: JSONDictionarayCompletion){
-        let request: NSURLRequest = NSURLRequest(URL: queryURl)
-        let dataTask = session.dataTaskWithRequest(request){
-            (let data, response, let error) in
+    func downloadJSONFromURL(completion: JSONDictionaryCompletion) {
+        
+        let request = NSURLRequest(URL: queryURL)
+        let dataTask = session.dataTaskWithRequest(request) {
+            (let data, let response, let error) in
+            
+            // 1. Check HTTP response for successful GET request
             if let httpResponse = response as? NSHTTPURLResponse {
-                switch(httpResponse.statusCode) {
+                switch httpResponse.statusCode {
                 case 200:
-                    let jsonDicitionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [String: AnyObject]
-                    completion(jsonDicitionary)
+                    // 2. Create JSON object with data
+                    let jsonDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [String: AnyObject]
+                    completion(jsonDictionary)
                 default:
-                    println("GET request is not successful. HTTP status code: \(httpResponse.statusCode)")
+                    println("GET request not successful. HTTP status code: \(httpResponse.statusCode)")
                 }
             } else {
                 println("Error: Not a valid HTTP response")

@@ -16,6 +16,7 @@
 		D0F334371B1F1884000969E4 /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0F334361B1F1884000969E4 /* CurrentWeather.plist */; };
 		D0F334391B1F18F5000969E4 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F334381B1F18F5000969E4 /* CurrentWeather.swift */; };
 		D0F3343C1B1F4B7E000969E4 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3343B1B1F4B7E000969E4 /* NetworkOperation.swift */; };
+		D0F3343E1B1F50B7000969E4 /* ForcastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3343D1B1F50B7000969E4 /* ForcastService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		D0F334361B1F1884000969E4 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = ../../../../../../Downloads/CurrentWeather.plist; sourceTree = "<group>"; };
 		D0F334381B1F18F5000969E4 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		D0F3343B1B1F4B7E000969E4 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		D0F3343D1B1F50B7000969E4 /* ForcastService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcastService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,9 @@
 				D0F3341B1B1F1660000969E4 /* Images.xcassets */,
 				D0F3341D1B1F1660000969E4 /* LaunchScreen.xib */,
 				D0F334381B1F18F5000969E4 /* CurrentWeather.swift */,
-				D0F334121B1F1660000969E4 /* Supporting Files */,
 				D0F3343B1B1F4B7E000969E4 /* NetworkOperation.swift */,
+				D0F3343D1B1F50B7000969E4 /* ForcastService.swift */,
+				D0F334121B1F1660000969E4 /* Supporting Files */,
 			);
 			path = stormy;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F3343E1B1F50B7000969E4 /* ForcastService.swift in Sources */,
 				D0F3343C1B1F4B7E000969E4 /* NetworkOperation.swift in Sources */,
 				D0F334171B1F1660000969E4 /* ViewController.swift in Sources */,
 				D0F334391B1F18F5000969E4 /* CurrentWeather.swift in Sources */,
