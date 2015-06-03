@@ -15,19 +15,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentPrecipLabel: UILabel?
     
     private let forecastAPIKey = "12277cb417f92c92601ad59f82772dae"
+    let coordinate: (lat: Double, long: Double) = (51.5173716 , -0.0734206)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let baseUrl = NSURL(string: "https://api.forecast.io/forecast/\(forecastAPIKey)/")
-        let forecastURL = NSURL(string: "51.5173716,-0.0734206", relativeToURL: baseUrl)
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: config)
-        let request = NSURLRequest(URL: forecastURL!)
-        let dataTask = session.dataTaskWithRequest(request, completionHandler: {
-            (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-        })
-        dataTask.resume()
+        let forecastService = ForecastService(APIKey: forecastAPIKey)
+        forecastService.getForecast(coordinate.lat, long: coordinate.long) {
+            (let currently) in
+            
+            if let currentWeather = currently {
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    
+                    if let temperature = currentWeather.temperature {
+                        self.currentTempLabel?.text = "\(temperature)º"
+                    }
+                    
+                    if let humidity = currentWeather.humidity {
+                        self.currentHumidityLabel?.text = "\(humidity)%"
+                    }
+                    
+                    if let precipitation = currentWeather.precipProbability {
+                        self.currentPrecipLabel?.text = "\(precipitation)%"
+                    }
+                    
+                }
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
