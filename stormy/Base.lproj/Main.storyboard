@@ -65,6 +65,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-qA-9Z3">
+                                <rect key="frame" x="278" y="50" width="43" height="43"/>
+                                <state key="normal" image="refresh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -76,8 +82,10 @@
                             <constraint firstAttribute="centerX" secondItem="Hfk-vM-E7S" secondAttribute="centerX" constant="80" id="TSL-p8-Ic0"/>
                             <constraint firstItem="smZ-Io-dgb" firstAttribute="top" secondItem="Hfk-vM-E7S" secondAttribute="bottom" constant="37" id="TyO-Ys-lPT"/>
                             <constraint firstAttribute="centerX" secondItem="jma-jk-6fF" secondAttribute="centerX" constant="60" id="V61-wv-m30"/>
+                            <constraint firstItem="QWk-qA-9Z3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="Yti-EM-kMe"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zck-3v-L15" secondAttribute="bottom" constant="60" id="b5j-bA-Vdn"/>
                             <constraint firstItem="WRw-Rx-B9Q" firstAttribute="centerX" secondItem="352-Dk-4Oz" secondAttribute="centerX" constant="5" id="eAS-Ac-Jg4"/>
+                            <constraint firstAttribute="centerX" secondItem="QWk-qA-9Z3" secondAttribute="centerX" id="f4e-8Q-qU9"/>
                             <constraint firstAttribute="centerX" secondItem="352-Dk-4Oz" secondAttribute="centerX" constant="-80" id="kpP-fq-JvP"/>
                             <constraint firstItem="smZ-Io-dgb" firstAttribute="top" secondItem="U2S-di-4aD" secondAttribute="bottom" constant="55" id="lIW-NT-aw6"/>
                             <constraint firstItem="WRw-Rx-B9Q" firstAttribute="top" secondItem="352-Dk-4Oz" secondAttribute="bottom" constant="8.5" id="qNE-Xf-fle"/>
@@ -101,5 +109,6 @@
     </scenes>
     <resources>
         <image name="default" width="30" height="30"/>
+        <image name="refresh" width="43" height="43"/>
     </resources>
 </document>
