@@ -81,6 +81,10 @@ class ViewController: UIViewController {
             activityIndicator?.stopAnimating()
         }
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
 }
 
