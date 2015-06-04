@@ -46,12 +46,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="Hfk-vM-E7S">
+                                <rect key="frame" x="190" y="108" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="kY8-FS-HCe"/>
+                                    <constraint firstAttribute="height" constant="60" id="lR6-Ij-8Os"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jma-jk-6fF" firstAttribute="top" secondItem="smZ-Io-dgb" secondAttribute="bottom" constant="6" id="9vs-Rv-J8n"/>
                             <constraint firstItem="5FQ-aq-MnX" firstAttribute="top" secondItem="jma-jk-6fF" secondAttribute="bottom" constant="8" id="E9V-c1-afw"/>
                             <constraint firstAttribute="centerY" secondItem="smZ-Io-dgb" secondAttribute="centerY" id="PND-X4-NcM"/>
+                            <constraint firstAttribute="centerX" secondItem="Hfk-vM-E7S" secondAttribute="centerX" constant="80" id="TSL-p8-Ic0"/>
+                            <constraint firstItem="smZ-Io-dgb" firstAttribute="top" secondItem="Hfk-vM-E7S" secondAttribute="bottom" constant="37" id="TyO-Ys-lPT"/>
                             <constraint firstAttribute="centerX" secondItem="jma-jk-6fF" secondAttribute="centerX" constant="60" id="V61-wv-m30"/>
                             <constraint firstItem="WRw-Rx-B9Q" firstAttribute="centerX" secondItem="352-Dk-4Oz" secondAttribute="centerX" constant="5" id="eAS-Ac-Jg4"/>
                             <constraint firstAttribute="centerX" secondItem="352-Dk-4Oz" secondAttribute="centerX" constant="-80" id="kpP-fq-JvP"/>
@@ -65,6 +74,7 @@
                         <outlet property="currentHumidityLabel" destination="5FQ-aq-MnX" id="Bby-ef-UDN"/>
                         <outlet property="currentPrecipLabel" destination="WRw-Rx-B9Q" id="0cf-EI-4iu"/>
                         <outlet property="currentTempLabel" destination="smZ-Io-dgb" id="5qd-CI-ChA"/>
+                        <outlet property="currentWeatherIcon" destination="Hfk-vM-E7S" id="Ta6-MF-AAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -72,4 +82,7 @@
             <point key="canvasLocation" x="267" y="311"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default" width="30" height="30"/>
+    </resources>
 </document>
