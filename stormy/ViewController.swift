@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentHumidityLabel: UILabel?
     @IBOutlet weak var currentPrecipLabel: UILabel?
     @IBOutlet weak var currentWeatherIcon: UIImageView?
+    @IBOutlet weak var currentWeatherSummary: UILabel?
     
     private let forecastAPIKey = "12277cb417f92c92601ad59f82772dae"
     let coordinate: (lat: Double, long: Double) = (51.5173716 , -0.0734206)
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
                     }
                     if let icon = currentWeather.icon {
                         self.currentWeatherIcon?.image = icon
+                    }
+                    
+                    if let summary = currentWeather.summary {
+                        self.currentWeatherSummary?.text = summary
                     }
                     
                 }
