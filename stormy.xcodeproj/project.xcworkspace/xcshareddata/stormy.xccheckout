@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>199D5211-67B7-4EDD-AA06-1A21F455D900</string>
+	<key>IDESourceControlProjectName</key>
+	<string>stormy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>857231AD355BE620BBA72476B6748DFBD1FB5120</key>
+		<string>https://github.com/mishal1/stormy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>stormy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>857231AD355BE620BBA72476B6748DFBD1FB5120</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mishal1/stormy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>857231AD355BE620BBA72476B6748DFBD1FB5120</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>857231AD355BE620BBA72476B6748DFBD1FB5120</string>
+			<key>IDESourceControlWCCName</key>
+			<string>stormy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
